@@ -1,5 +1,7 @@
 # Multiple-pages
 
+一个用 vue 构建的多页面练习 demo
+
 ## Project setup
 ```
 yarn install
