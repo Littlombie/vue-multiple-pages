@@ -17,12 +17,6 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/about',
-      beforeEnter(){
-        window.location.href = 'about.html'
-      }
     }
   ]
 })
