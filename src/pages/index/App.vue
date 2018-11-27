@@ -1,12 +1,11 @@
 <template>
-  <div id="about">
+  <div id="app">
     <div id="nav">
-      <a href="/index">index</a> | 
+      <a to="/index">index</a> | 
       <a href="/home">Home</a> | 
-      <router-link to="/about">About</router-link> |
-      <router-link to="/aboutYou"> About You</router-link>
+      <a href="/about">About</a>
     </div>
-    <router-view/>
+    <!-- <router-view/> -->
   </div>
 </template>
 <style lang="stylus">

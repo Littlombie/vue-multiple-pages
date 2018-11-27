@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
+      <a href="/index">index</a> | 
       <router-link to="/home">Home</router-link> | 
       <a href="/about">About</a>
     </div>

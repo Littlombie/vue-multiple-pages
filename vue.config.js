@@ -35,7 +35,7 @@ const genPages = () => {
       entry: `${route}/${config.entry}`,
       template: `${route}/${config.html}`,
       filename: filename === 'index' ? config.html : `${filename}/${config.html}`,
-      title: `${filename}`
+      // title: `${filename}`
     };
    });
    return pages;
