@@ -1,24 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/index.vue'
+import Home from './views/home.vue'
 
 Vue.use(Router)
 
-const VueRouter =   new Router({
+const VueRouter = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    { 
+      path: '/', 
+      redirect: '/index'
+    },
     {
-      path: '/',
+      path: '/index',
       name: 'home',
       meta: {
         title: 'Home page'
       },
-      component: Home
-    },
-    {
-      path: '/home',
-      name: 'home',
       component: Home
     }
   ]
