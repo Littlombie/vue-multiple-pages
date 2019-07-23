@@ -1,36 +1,44 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from './views/About.vue'
+import Index from './views/home.vue'
 import aboutYou from './views/aboutyou.vue'
 
 Vue.use(Router)
 
-const VueRouter = new Router ({
-  mode: 'history',
+const VueRouter = new Router({
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    {
-      path: '/about',
-      name: 'about',
-      meta: {
-        title: 'About'
-      },
-      component: About
+  {
+    path: '/',
+    name: 'AboutHome',
+    meta: {
+      title: 'AboutHome'
     },
-    {
-      path: '/about.html',
-      name: 'about',
-      component: About
+    component: Index
+  },
+  {
+    path: '/about',
+    name: 'about',
+    meta: {
+      title: 'About'
     },
-    {
-      path: '/aboutYou',
-      name:'aboutYou',
-      meta: {
-        title: 'About You'
-      },
-      component: aboutYou
-    }
-  ]
+    component: About
+  },
+  {
+    path: '/about.html',
+    name: 'about',
+    component: About
+  },
+  {
+    path: '/aboutYou',
+    name: 'aboutYou',
+    meta: {
+      title: 'About You'
+    },
+    component: aboutYou
+  }]
 })
 VueRouter.beforeEach((to, from, next) => {
   if (to.meta.title) {
