@@ -50,7 +50,7 @@ module.exports = {
       config.plugins.delete(`prefetch-${entryName}`);
     });
     if (process.env.NODE_ENV === 'production') {
-      config.plugins('extract-css').tap(() => [
+      config.plugin('extract-css').tap(() => [
         {
           filename: '[name]/css/[name].[contenthash:8].css',
           chunkFilename: '[name]/css/[name].[contenthash:8].css'
